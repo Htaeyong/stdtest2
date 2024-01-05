@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>사용자 정보 수정</title>
+</head>
+<body>
+    <h1>사용자 정보 수정: {{ user.username }}</h1>
+    <form method="post">
+        Password: <input type="password" name="password" value="{{ user.password }}"><br>
+        Email: <input type="email" name="email" value="{{ user.email }}"><br>
+        <!-- 나머지 필드 ... -->
+        <input type="submit" value="업데이트">
+    </form>
+    <a href="/"><button>홈으로</button></a>
+</body>
+</html>

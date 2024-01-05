@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>사용자 등록</title>
+</head>
+<body>
+    <h1>새 사용자 등록</h1>
+    <form method="post" action="/useradd">
+        Username: <input type="text" name="username" required><br>
+        Password: <input type="password" name="password" required><br>
+        Department: <input type="text" name="department"><br>
+        Email: <input type="email" name="email"><br>
+        Phone: <input type="text" name="phone"><br>
+        Role: 
+        <select name="role">
+            <option value="admin">Admin</option>
+            <option value="group_manager">Group Manager</option>
+            <option value="user" selected>User</option>
+        </select><br>
+        Memo: <textarea name="memo"></textarea><br>
+        <input type="submit" value="등록">
+    </form>
+</body>
+</html>

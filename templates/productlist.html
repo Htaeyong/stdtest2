@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>제품 목록</title>
+</head>
+<body>
+    <h1>제품 목록</h1>
+    <table border="1">
+        <tr>
+            <th>제품명</th>
+            <th>제조사</th>
+            <th>EOS</th>
+            <th>EOL</th>
+            <th>제품 구분</th>
+            <th>파일</th>
+        </tr>
+        {% for product in products %}
+        <tr>
+            <td>{{ product.product_name }}</td>
+            <td>{{ product.manufacturer }}</td>
+            <td>{{ product.eos }}</td>
+            <td>{{ product.eol }}</td>
+            <td>{{ product.product_category }}</td>
+            <td>
+                {% for file in product.files %}
+                <a href="{{ url_for('download_file', file_id=file.file_id) }}">{{ file.file_name }}</a><br>
+                {% endfor %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

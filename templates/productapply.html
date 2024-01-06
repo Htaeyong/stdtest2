@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>제품 등록</title>
+</head>
+<body>
+    <h1>제품 등록</h1>
+    <form method="post" action="/productapply" enctype="multipart/form-data">
+        제품명: <input type="text" name="product_name" required><br>
+        제조사: <input type="text" name="manufacturer"><br>
+        EOS: <input type="date" name="eos"><br>
+        EOL: <input type="date" name="eol"><br>
+        제품 구분: <input type="text" name="product_category"><br>
+        인증서 파일: <input type="file" name="certificate_files" multiple><br>
+        제품 규격: <textarea name="product_specifications"></textarea><br>
+        <input type="submit" value="등록">
+    </form>
+</body>
+</html>
